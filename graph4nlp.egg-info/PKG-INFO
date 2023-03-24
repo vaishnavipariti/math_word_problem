@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: graph4nlp
+Version: 0.2a11
+Summary: A DGL and PyTorch based graph deep learning library for natural language processing
+Author: Graph4NLP Team
+License: Apache 2.0
+Platform: macosx_x86_64
+License-File: LICENSE

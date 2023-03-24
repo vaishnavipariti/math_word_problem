@@ -1,0 +1,76 @@
+'batch_size': 20
+ 'beam_size': 4
+ 'checkpoint_save_path': './checkpoint_save'
+ 'dataset_yaml': './config.yaml'
+ 'decoder_args': {'rnn_decoder_private': {'max_decoder_step': 35,
+                                          'max_tree_depth': 8,
+                                          'use_input_feed': True
+                                          'use_sibling': False},
+                  'rnn_decoder_share': {'attention_type': 'uniform',
+                                        'dropout': 0.3,
+                                        'fuse_strategy': 'concatenate',
+                                        'graph_pooling_strategy': None,
+                                        'hidden_size': 300,
+                                        'input_size': 300,
+                                        'rnn_emb_input_size': 300,
+                                        'rnn_type': 'lstm',
+                                        'teacher_forcing_rate': 1.0,
+                                        'use_copy': True,
+                                        'use_coverage': False}}
+ 'decoder_name': 'stdtree'
+ 'gpuid': 1
+ 'grad_clip': 5
+ 'graph_construction_args': {'graph_construction_private': {'as_node': False,
+                                                            'edge_strategy': 'homogeneous',
+                                                            'merge_strategy': 'tailhead',
+                                                            'sequential_link': True},
+                             'graph_construction_share': {'graph_type': 'dependency',
+                                                          'port': 9000
+                                                          'root_dir': './data',
+                                                          'share_vocab': True,
+                                                          'thread_number': 4,
+                                                          'timeout': 15000,
+                                                          'topology_subdir': 'DependencyGraph'},
+                             'node_embedding': {'connectivity_ratio': 0.05,
+                                                'embedding_style': {'bert_lower_case': None,
+                                                                    'bert_model_name': None,
+                                                                    'emb_strategy': 'w2v_bilstm',
+                                                                    'num_rnn_layers': 1,
+                                                                    'single_token_item': True}
+                                                'epsilon_neigh': 0.5,
+                                                'fix_bert_emb': False,
+                                                'fix_word_emb': False,
+                                                'hidden_size': 300,
+                                                'input_size': 300,
+                                                'num_heads': 1,
+                                                'rnn_dropout': 0.1,
+                                                'sim_metric_type': 'weighted_cosine',
+                                                'smoothness_ratio': 0.1,
+                                                'sparsity_ratio': 0.1,
+                                                'top_k_neigh': None,
+                                                'word_dropout': 0.1}}
+ 'graph_construction_name': 'dependency'
+ 'graph_embedding_args': {'graph_embedding_private': {'activation': 'relu',
+                                                      'aggregator_type': 'lstm',
+                                                      'bias': True,
+                                                      'norm': None,
+                                                      'use_edge_weight': False},
+                          'graph_embedding_share': {'attn_drop': 0.0,
+                                                    'direction_option': 'undirected',
+                                                    'feat_drop': 0.0,
+                                                    'hidden_size': 300,
+                                                    'input_size': 300,
+                                                    'num_layers': 1,
+                                                    'output_size': 300}}
+ 'graph_embedding_name': 'graphsage'
+ 'graph_type': 'static'
+ 'init_weight': 0.08
+ 'learning_rate': 0.001
+ 'max_epochs': 20
+ 'min_freq': 1
+ 'pretrained_word_emb_cache_dir': '.vector_cache'
+ 'pretrained_word_emb_name': None
+ 'pretrained_word_emb_url': None
+ 'seed': 123
+ 'share_vocab': True
+ 'weight_decay': 0}
