@@ -1,4 +1,4 @@
-graph_construction_name: "node_emb"
+graph_construction_name: "dependency"
 graph_embedding_name: "graphsage"
 decoder_name: "stdtree"
 
