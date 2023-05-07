@@ -4,9 +4,9 @@ decoder_name: "stdtree"
 
 graph_construction_args:
   graph_construction_share:
-    graph_type: 'node_emb'
+    graph_type: 'dependency'
     root_dir: "examples/pytorch/math_word_problem/mawps/mawps_data"
-    topology_subdir: 'NodeEmbGraph'
+    topology_subdir: 'dependencygraph'
     thread_number: 4
     port: 9000
     timeout: 15000
